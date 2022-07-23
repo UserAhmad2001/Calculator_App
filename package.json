@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "sass": "^1.54.0"
+  },
+  "name": "calculator_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "scripts": {
+    "sass": "sass scss:assets --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UserAhmad2001/Calculator_App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UserAhmad2001/Calculator_App/issues"
+  },
+  "homepage": "https://github.com/UserAhmad2001/Calculator_App#readme",
+  "description": ""
+}
