@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Calculator app  | frontend Mentor</title>
   <link rel="stylesheet" href="./assets/style.css">
@@ -11,50 +10,39 @@
 <body>
 
   <div class="container">
+    <span class="title">clac</span>
+    <div class="themes">
+      <label for="theme-slider">THEME  <input type="range" min="1" max="3" id="theme-slider"></label>
+    </div>
+
+    <input type="number" class="number-input">
     
-    <div class="header">
-      <div class="title">
-        calc
-      </div>
-
-      <div class="themes">
-        <label for="themes-range">Themes:
-              <input type="range" id="themes-range" min="1" max="3">
-        </label>
-      </div>
-
-    </div>
-
-    <div class="textField"></div>
-
-    <div class="buttons">
-      <span class="item">7</span>
-      <span class="item">8</span>
-      <span class="item">9</span>
-      <span class="item">DEL</span>
-      <span class="item">4</span>
-      <span class="item">5</span>
-      <span class="item">6</span>
-      <span class="item">+</span>
-      <span class="item">1</span>
-      <span class="item">2</span>
-      <span class="item">3</span>
-      <span class="item">-</span>
-      <span class="item">.</span>
-      <span class="item">0</span>
-      <span class="item">/</span>
-      <span class="item">x</span>
-      <span class="item">RESET</span>
-      <span class="item">=</span>
-    </div>
+    <span class="btn">7</span>
+    <span class="btn">8</span>
+    <span class="btn">9</span>
+    <span class="btn">DEL</span>
+    <span class="btn">4</span>
+    <span class="btn">5</span>
+    <span class="btn">6</span>
+    <span class="btn">+</span>
+    <span class="btn">1</span>
+    <span class="btn">2</span>
+    <span class="btn">3</span>
+    <span class="btn">-</span>
+    <span class="btn">.</span>
+    <span class="btn">0</span>
+    <span class="btn">/</span>
+    <span class="btn">X</span>
+    <span class="btn">RESET</span>
+    <span class="btn">=</span>
   </div>
 
 
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Ahmad Mana</a>.
-  </div>
+  </div> -->
 
 </body>
 </html>
