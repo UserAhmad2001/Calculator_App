@@ -7,28 +7,26 @@
   font-weight: 700;
   font-size: 32px;
   color: white;
-  user-select: none;
 }
 
 body, html {
   width: 100%;
   height: 100%;
-  background: #3B4664;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(2rem, 3.4rem));
+  grid-template-columns: repeat(4, minmax(2rem, 2.9rem));
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   row-gap: 0.5rem;
   width: 70%;
-  max-width: 15rem;
+  max-width: 12rem;
 }
 .container .title {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 .container .themes {
   grid-column: 2/5;
@@ -55,82 +53,73 @@ body, html {
 }
 .container .number-input {
   grid-column: 1/5;
-  background: #181F32;
   border-radius: 0.3rem;
-  padding: 0.9rem 0.7rem;
+  padding: 0.6rem 0.7rem;
   font-size: 1.5rem;
   text-align: right;
   border: none;
 }
 .container .buttons {
   display: grid;
-  grid-template-columns: repeat(4, minmax(2rem, 24%));
+  grid-template-columns: repeat(4, minmax(1rem, 3.5rem));
   width: 100%;
   grid-column: 1/5;
-  background: #252D44;
-  padding: 0.9rem 0.7rem;
-  gap: 0.5rem;
+  padding: 0.6rem 0.7rem;
+  gap: 0.4rem;
   border-radius: 0.3rem;
+  height: 95%;
 }
 .container .buttons .btn {
   cursor: pointer;
-  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #EAE3DB;
-  border-bottom: 4px solid #B0A295;
   border-radius: 0.3rem;
-  padding-block: 0.3rem;
+  padding-block: 0.25rem;
+  font-size: 26px;
+}
+.container .buttons .btn:hover {
+  filter: brightness(1.1);
 }
 .container .buttons .reset-btn {
   grid-column: 1/3;
-  font-size: 0.7rem;
-  background: #647298;
-  border-color: #414E71;
-  color: white;
+  font-size: 17px;
+  padding-block: 0.4rem;
 }
 .container .buttons .del-btn {
-  color: white;
-  background: #647298;
-  border-color: #414E71;
-  font-size: 0.7rem;
+  font-size: 16px;
 }
 .container .buttons .equal-btn {
-  font-size: 0.7rem;
-  color: white;
   grid-column: 3/5;
-  background: #CE3E2F;
-  border-color: #8F2316;
+  font-size: 15px;
 }
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.theme1 {
+  background: #E6E6E6;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+  /* Special styling for WebKit/Blink */
+}
+.theme1 input::-webkit-outer-spin-button,
+.theme1 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-/* Firefox */
-input[type=number] {
+.theme1 input[type=number] {
   -moz-appearance: textfield;
 }
-
-input[type=range] {
+.theme1 input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
 }
-
-input[type=range]::-webkit-slider-thumb {
+.theme1 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
-
-input[type=range]:focus {
+.theme1 input[type=range]:focus {
   outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
-
-input[type=range]::-ms-track {
+.theme1 input[type=range]::-ms-track {
   width: 100%;
   cursor: pointer;
   /* Hides the slider so custom styles can be added */
@@ -138,19 +127,216 @@ input[type=range]::-ms-track {
   border-color: transparent;
   color: transparent;
 }
+.theme1 input[type=range]::-webkit-slider-thumb {
+  background: #CB5101;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.theme1 input[type=range]::-webkit-slider-thumb:hover {
+  filter: brightness(1.1);
+}
+.theme1 input[type=range]::-webkit-slider-runnable-track {
+  padding: 0.1rem;
+  border-radius: 1rem;
+  background: #D3CDCD;
+}
+.theme1 .container .title {
+  color: black;
+}
+.theme1 .container .themes label {
+  color: black;
+}
+.theme1 .container .themes label input::before {
+  color: black;
+}
+.theme1 .container .number-input {
+  background: #EEEEEE;
+  color: black;
+}
+.theme1 .container .buttons {
+  background: #D3CDCD;
+}
+.theme1 .container .buttons .btn {
+  color: black;
+  background: #E5E4E0;
+  border-bottom: 3px solid #A2998C;
+}
+.theme1 .container .buttons .reset-btn, .theme1 .container .buttons .del-btn {
+  background: #388187;
+  border-color: #1D5A63;
+  color: white;
+}
+.theme1 .container .buttons .equal-btn {
+  color: white;
+  background: #C85401;
+  border-color: #873700;
+}
 
-/* Special styling for WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  background: #CF4034;
+.theme2 {
+  background: #3B4664;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+  /* Special styling for WebKit/Blink */
+}
+.theme2 input::-webkit-outer-spin-button,
+.theme2 input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.theme2 input[type=number] {
+  -moz-appearance: textfield;
+}
+.theme2 input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+.theme2 input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.theme2 input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+.theme2 input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.theme2 input[type=range]::-webkit-slider-thumb {
+  background: #FA893A;
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
+  cursor: pointer;
 }
-
-input[type=range]::-webkit-slider-runnable-track {
+.theme2 input[type=range]::-webkit-slider-thumb:hover {
+  filter: brightness(1.1);
+}
+.theme2 input[type=range]::-webkit-slider-runnable-track {
   padding: 0.1rem;
   border-radius: 1rem;
+  background: #D4CDCE;
+}
+.theme2 .container .title {
+  color: white;
+}
+.theme2 .container .themes label {
+  color: white;
+}
+.theme2 .container .themes label input::before {
+  color: white;
+}
+.theme2 .container .number-input {
+  background: #181F32;
+  color: white;
+}
+.theme2 .container .buttons {
   background: #252D44;
+}
+.theme2 .container .buttons .btn {
+  color: black;
+  background: #EAE3DB;
+  border-bottom: 3px solid #B0A295;
+}
+.theme2 .container .buttons .reset-btn {
+  background: #647298;
+  border-color: #414E71;
+  color: white;
+}
+.theme2 .container .buttons .del-btn {
+  color: white;
+  background: #647298;
+  border-color: #414E71;
+}
+.theme2 .container .buttons .equal-btn {
+  color: white;
+  background: #CE3E2F;
+  border-color: #8F2316;
+}
+
+.theme3 {
+  background: #17062A;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+  /* Special styling for WebKit/Blink */
+}
+.theme3 input::-webkit-outer-spin-button,
+.theme3 input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.theme3 input[type=number] {
+  -moz-appearance: textfield;
+}
+.theme3 input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+.theme3 input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.theme3 input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+.theme3 input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.theme3 input[type=range]::-webkit-slider-thumb {
+  background: #89FBF4;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.theme3 input[type=range]::-webkit-slider-thumb:hover {
+  filter: brightness(1.1);
+}
+.theme3 input[type=range]::-webkit-slider-runnable-track {
+  padding: 0.1rem;
+  border-radius: 1rem;
+  background: #1E0837;
+}
+.theme3 .container .title {
+  color: #FEE642;
+}
+.theme3 .container .themes label {
+  color: #FEE642;
+}
+.theme3 .container .themes label input::before {
+  color: #FEE642;
+}
+.theme3 .container .number-input {
+  background: #1E0836;
+  color: #FEE642;
+}
+.theme3 .container .buttons {
+  background: #1E0836;
+}
+.theme3 .container .buttons .btn {
+  color: #FEE642;
+  background: #331B4D;
+  border-bottom: 3px solid #871F9E;
+}
+.theme3 .container .buttons .reset-btn, .theme3 .container .buttons .del-btn {
+  background: #56077C;
+  border-color: #BF18F4;
+  color: white;
+}
+.theme3 .container .buttons .equal-btn {
+  color: black;
+  background: #00DECF;
+  border-color: #6EF9F0;
 }
 
 /*# sourceMappingURL=style.css.map */

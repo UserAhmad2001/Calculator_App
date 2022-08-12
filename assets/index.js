@@ -9,69 +9,7 @@ theme_slider.addEventListener('input', themeChange)
 
 
 var theme_colors = [
-    {
-        body: '#3B4664',
-        num_field: '#181F32',
-        title: 'white',
-        theme_txt: 'white',
-        theme_slider_thumb: '#CF4034',
-        theme_slider_bg: '#252D44',
-        theme_slider_numbering: 'white',
-        buttons_bg: '#252D44',
-        btn_bg: '#EAE3DB',
-        btn_shadow: '#B0A295',
-        del_reset_btn_bg: '#647298',
-        del_reset_btn_shadow: '#414E71',
-        equal_btn_bg: '#CE3E2F',
-        equal_btn_shadow: '#8F2316',
-
-        num_field_text_color: 'white',
-        equal_btn_color: 'white',
-        reset_del_btn_color: 'white',
-        btn_color: 'black'
-    },
-    {
-        body: '3B4664',
-        num_field: '181F32',
-        title: 'white',
-        theme_txt: 'white',
-        theme_slider_thumb: 'CF4034',
-        theme_slider_bg: '252D44',
-        theme_slider_numbering: 'white',
-        buttons_bg: '252D44',
-        btn_bg: 'EAE3DB',
-        btn_shadow: 'B0A295',
-        del_reset_btn_bg: '647298',
-        del_reset_btn_shadow: '414E71',
-        equal_btn_bg: 'CE3E2F',
-        equal_btn_shadow: '8F2316',
-
-        num_field_text_color: '414E71',
-        equal_btn_color: 'CE3E2F',
-        reset_del_btn_color: '8F2316',
-        btn_color: '414E71'
-    },
-    {
-        body: '3B4664',
-        num_field: '181F32',
-        title: 'white',
-        theme_txt: 'white',
-        theme_slider_thumb: 'CF4034',
-        theme_slider_bg: '252D44',
-        theme_slider_numbering: 'white',
-        buttons_bg: '252D44',
-        btn_bg: 'EAE3DB',
-        btn_shadow: 'B0A295',
-        del_reset_btn_bg: '647298',
-        del_reset_btn_shadow: '414E71',
-        equal_btn_bg: 'CE3E2F',
-        equal_btn_shadow: '8F2316',
-
-        num_field_text_color: '414E71',
-        btn_color: '414E71',
-        equal_btn_color: 'CE3E2F',
-        reset_del_btn_color: '8F2316',
-    }
+    'theme1','theme2','theme3'
 ]
 
 
@@ -125,36 +63,9 @@ function numKeyPress(ev) {
     }
 }
 function themeChange(ev) {
-var ts = theme_colors[ev.currentTarget.value-1]
-document.querySelector('body').style.background = ts.body
-num.style.background = ts.num_field
-num.style.color = ts.num_field_text_color
-document.querySelector('.title').style.background = ts.title
-
-// THIS SPACE IS FOR THE THEME
-
-document.querySelector('.buttons').style.background = ts.buttons_bg
-document.querySelectorAll('.btn').forEach(el=>{
-    el.style.background = ts.btn_bg
-    el.style.borderColor = ts.btn_shadow
-    el.style.color = ts.btn_color
-})
-var del_btn = document.querySelector('.del-btn')
-var reset_btn = document.querySelector('.reset-btn')
-var equal_btn = document.querySelector('.equal-btn')
-
-equal_btn.style.background = ts.equal_btn_bg
-equal_btn.style.borderColor = ts.equal_btn_shadow
-equal_btn.style.color = ts.equal_btn_color
-
-del_btn.style.background = ts.del_reset_btn_bg
-reset_btn.style.background = ts.del_reset_btn_bg
-
-del_btn.style.borderColor = ts.del_reset_btn_shadow
-reset_btn.style.borderColor = ts.del_reset_btn_shadow
-
-del_btn.style.color = ts.reset_del_btn_color
-reset_btn.style.color = ts.reset_del_btn_color
-
-
+    const body = document.querySelector('body')
+    body.classList.remove('theme1')
+    body.classList.remove('theme2')
+    body.classList.remove('theme3')
+    body.classList.add(theme_colors[ev.target.value-1])
 }

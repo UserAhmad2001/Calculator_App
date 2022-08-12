@@ -1,0 +1,57 @@
+.theme2{
+    background: #3B4664;
+    @import './extra2';
+
+
+    
+.container{
+    .title{
+        color: white;
+    }
+    
+    .themes{
+    label{
+        color: white;
+
+        input{
+            &::before{
+                color: white;
+            }
+        }
+    }
+    }
+    .number-input{
+        background: #181F32;
+        color: white;
+    }
+    .buttons{
+        background: #252D44;
+        .btn{
+            color: black;
+            background: #EAE3DB;
+            border-bottom: 3px solid #B0A295;
+        }        
+        .reset-btn{
+            background: #647298;
+            border-color: #414E71;
+            color: white;
+        }        
+        .del-btn{
+            color: white;
+            background: #647298;
+            border-color: #414E71;
+        }        
+        .equal-btn{
+            color: white;
+            background: #CE3E2F ;
+            border-color: #8F2316;
+        }
+
+    
+    
+        }
+
+}
+    
+    }
+        

@@ -1,0 +1,53 @@
+.theme3{
+    background: #17062A;
+    @import './extra3';
+
+
+    
+.container{
+    .title{
+        color: #FEE642;
+    }
+    
+    .themes{
+    label{
+        color: #FEE642;
+
+        input{
+            &::before{
+                color: #FEE642;
+            }
+        }
+    }
+    }
+    .number-input{
+        background: #1E0836;
+        color: #FEE642;
+    }
+    .buttons{
+        background: #1E0836;
+        .btn{
+            color: #FEE642;
+            background: #331B4D;
+            border-bottom: 3px solid #871F9E;
+        }        
+        .reset-btn,.del-btn{
+            background: #56077C;
+            border-color: #BF18F4;
+            color: white;
+        }        
+                
+        .equal-btn{
+            color: black;
+            background: #00DECF ;
+            border-color: #6EF9F0;
+        }
+
+    
+    
+        }
+
+}
+    
+    }
+    
